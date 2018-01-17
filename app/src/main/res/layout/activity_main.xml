@@ -32,7 +32,7 @@
                 android:gravity="center_horizontal"
                 android:text="Home"
                 android:textAllCaps="true"
-                android:textColor="#ffffff"
+                android:textColor="#000000"
                 android:textSize="26sp" />
 
             <TextView
@@ -44,7 +44,7 @@
                 android:gravity="center_horizontal"
                 android:text="0"
                 android:textAllCaps="true"
-                android:textColor="#ffffff"
+                android:textColor="#000000"
                 android:textSize="80sp" />
 
             <LinearLayout
@@ -195,7 +195,7 @@
                 android:gravity="center_horizontal"
                 android:text="Guest"
                 android:textAllCaps="true"
-                android:textColor="#ffffff"
+                android:textColor="#000000"
                 android:textSize="26sp" />
 
             <TextView
@@ -207,7 +207,7 @@
                 android:gravity="center_horizontal"
                 android:text="0"
                 android:textAllCaps="true"
-                android:textColor="#ffffff"
+                android:textColor="#000000"
                 android:textSize="80sp" />
 
             <LinearLayout
