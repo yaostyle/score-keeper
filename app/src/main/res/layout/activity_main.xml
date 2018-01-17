@@ -4,7 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#4f823b"
     tools:context="com.example.chrishsu.scorekeeper.MainActivity">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/android_field"
+        android:layout_marginTop="-120dp"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -14,29 +21,30 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
             android:layout_weight="1"
-            android:layout_marginTop="80dp"
             android:orientation="vertical">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:fontFamily="serif-monospace"
+                android:fontFamily="serif-monospace-bold"
                 android:gravity="center_horizontal"
                 android:text="Home"
                 android:textAllCaps="true"
-                android:textSize="32sp" />
+                android:textColor="#ffffff"
+                android:textSize="26sp" />
 
             <TextView
                 android:id="@+id/team_home_score"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:fontFamily="serif-monospace"
+                android:layout_marginTop="-10dp"
+                android:fontFamily="serif-monospace-bold"
                 android:gravity="center_horizontal"
                 android:text="0"
-                android:textColor="#000000"
                 android:textAllCaps="true"
-                android:layout_marginTop="-10dp"
+                android:textColor="#ffffff"
                 android:textSize="80sp" />
 
             <LinearLayout
@@ -48,8 +56,8 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="serif-monospace"
                     android:layout_weight="1"
+                    android:fontFamily="serif-monospace"
                     android:gravity="center_horizontal"
                     android:text="Ball"
                     android:textAllCaps="true"
@@ -60,8 +68,8 @@
                     android:id="@+id/team_home_ball_score"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="serif-monospace"
                     android:layout_weight="1"
+                    android:fontFamily="serif-monospace"
                     android:gravity="center_horizontal"
                     android:text="0"
                     android:textAllCaps="true"
@@ -79,8 +87,8 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="serif-monospace"
                     android:layout_weight="1"
+                    android:fontFamily="serif-monospace"
                     android:gravity="center_horizontal"
                     android:text="Strike"
                     android:textAllCaps="true"
@@ -91,8 +99,8 @@
                     android:id="@+id/team_home_strike_score"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="serif-monospace"
                     android:layout_weight="1"
+                    android:fontFamily="serif-monospace"
                     android:gravity="center_horizontal"
                     android:text="0"
                     android:textAllCaps="true"
@@ -109,8 +117,8 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="serif-monospace"
                     android:layout_weight="1"
+                    android:fontFamily="serif-monospace"
                     android:gravity="center_horizontal"
                     android:text="Out"
                     android:textAllCaps="true"
@@ -121,8 +129,8 @@
                     android:id="@+id/team_home_out_score"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="serif-monospace"
                     android:layout_weight="1"
+                    android:fontFamily="serif-monospace"
                     android:gravity="center_horizontal"
                     android:text="0"
                     android:textAllCaps="true"
@@ -133,36 +141,38 @@
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_margin="8dp"
                 android:fontFamily="serif-monospace"
-                android:layout_margin="4dp"
-                android:layout_marginRight="8dp"
-                android:layout_marginLeft="8dp"
-                android:textSize="20sp"
-                android:text="Score"/>
+                android:onClick="button_home_score"
+                android:text="Score"
+                android:textSize="20sp" />
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_margin="8dp"
                 android:fontFamily="serif-monospace"
-                android:layout_margin="4dp"
-                android:textSize="20sp"
-                android:text="Ball"/>
+                android:onClick="button_home_ball"
+                android:text="Ball"
+                android:textSize="20sp" />
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_margin="8dp"
                 android:fontFamily="serif-monospace"
-                android:layout_margin="4dp"
-                android:textSize="20sp"
-                android:text="Strike"/>
+                android:onClick="button_home_strike"
+                android:text="Strike"
+                android:textSize="20sp" />
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_margin="8dp"
                 android:fontFamily="serif-monospace"
-                android:layout_margin="4dp"
-                android:textSize="20sp"
-                android:text="Out"/>
+                android:onClick="button_home_out"
+                android:text="Out"
+                android:textSize="20sp" />
 
 
         </LinearLayout>
@@ -174,29 +184,30 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
             android:layout_weight="1"
-            android:layout_marginTop="80dp"
             android:orientation="vertical">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:fontFamily="serif-monospace"
+                android:fontFamily="serif-monospace-bold"
                 android:gravity="center_horizontal"
                 android:text="Guest"
                 android:textAllCaps="true"
-                android:textSize="32sp" />
+                android:textColor="#ffffff"
+                android:textSize="26sp" />
 
             <TextView
                 android:id="@+id/team_guest_score"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:fontFamily="serif-monospace"
+                android:layout_marginTop="-10dp"
+                android:fontFamily="serif-monospace-bold"
                 android:gravity="center_horizontal"
                 android:text="0"
-                android:textColor="#000000"
                 android:textAllCaps="true"
-                android:layout_marginTop="-10dp"
+                android:textColor="#ffffff"
                 android:textSize="80sp" />
 
             <LinearLayout
@@ -208,8 +219,8 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="serif-monospace"
                     android:layout_weight="1"
+                    android:fontFamily="serif-monospace"
                     android:gravity="center_horizontal"
                     android:text="Ball"
                     android:textAllCaps="true"
@@ -220,8 +231,8 @@
                     android:id="@+id/team_guest_ball_score"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="serif-monospace"
                     android:layout_weight="1"
+                    android:fontFamily="serif-monospace"
                     android:gravity="center_horizontal"
                     android:text="0"
                     android:textAllCaps="true"
@@ -239,8 +250,8 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="serif-monospace"
                     android:layout_weight="1"
+                    android:fontFamily="serif-monospace"
                     android:gravity="center_horizontal"
                     android:text="Strike"
                     android:textAllCaps="true"
@@ -251,8 +262,8 @@
                     android:id="@+id/team_guest_strike_score"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="serif-monospace"
                     android:layout_weight="1"
+                    android:fontFamily="serif-monospace"
                     android:gravity="center_horizontal"
                     android:text="0"
                     android:textAllCaps="true"
@@ -269,8 +280,8 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="serif-monospace"
                     android:layout_weight="1"
+                    android:fontFamily="serif-monospace"
                     android:gravity="center_horizontal"
                     android:text="Out"
                     android:textAllCaps="true"
@@ -281,8 +292,8 @@
                     android:id="@+id/team_guest_out_score"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="serif-monospace"
                     android:layout_weight="1"
+                    android:fontFamily="serif-monospace"
                     android:gravity="center_horizontal"
                     android:text="0"
                     android:textAllCaps="true"
@@ -293,40 +304,40 @@
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_margin="8dp"
                 android:fontFamily="serif-monospace"
-                android:layout_margin="4dp"
-                android:textSize="20sp"
-                android:text="Score"/>
+                android:onClick="button_guest_score"
+                android:text="Score"
+                android:textSize="20sp" />
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_margin="8dp"
                 android:fontFamily="serif-monospace"
-                android:layout_margin="4dp"
-                android:textSize="20sp"
-                android:text="Ball"/>
+                android:onClick="button_guest_ball"
+                android:text="Ball"
+                android:textSize="20sp" />
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_margin="8dp"
                 android:fontFamily="serif-monospace"
-                android:layout_margin="4dp"
-                android:textSize="20sp"
-                android:text="Strike"/>
+                android:onClick="button_guest_strike"
+                android:text="Strike"
+                android:textSize="20sp" />
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_margin="8dp"
                 android:fontFamily="serif-monospace"
-                android:layout_margin="4dp"
-                android:textSize="20sp"
-                android:text="Out"/>
-
+                android:onClick="button_guest_out"
+                android:text="Out"
+                android:textSize="20sp" />
 
         </LinearLayout>
-
-
-
 
     </LinearLayout>
 
@@ -334,13 +345,14 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fontFamily="serif-monospace"
-        android:text="Reset"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="8dp"
-        android:textSize="24sp"
-        android:layout_marginTop="6dp"
+        android:layout_marginLeft="5dp"
         android:layout_marginRight="5dp"
-        android:layout_marginLeft="5dp"/>
+        android:layout_marginTop="6dp"
+        android:fontFamily="serif-monospace"
+        android:onClick="button_reset_all"
+        android:text="Reset"
+        android:textSize="24sp" />
 
 </RelativeLayout>
