@@ -1,358 +1,364 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#4f823b"
-    tools:context="com.example.chrishsu.scorekeeper.MainActivity">
+    android:background="@color/field_bg">
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/android_field"
-        android:layout_marginTop="-120dp"/>
-
-    <LinearLayout
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:background="@color/field_bg"
+        tools:context="com.example.chrishsu.scorekeeper.MainActivity">
 
-        <LinearLayout
+        <ImageView
+            android:contentDescription="@null"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="70dp"
-            android:layout_weight="1"
-            android:orientation="vertical">
+            android:layout_marginTop="-120dp"
+            android:src="@drawable/android_field" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:fontFamily="serif-monospace-bold"
-                android:gravity="center_horizontal"
-                android:text="Home"
-                android:textAllCaps="true"
-                android:textColor="#000000"
-                android:textSize="26sp" />
-
-            <TextView
-                android:id="@+id/team_home_score"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="-10dp"
-                android:fontFamily="serif-monospace-bold"
-                android:gravity="center_horizontal"
-                android:text="0"
-                android:textAllCaps="true"
-                android:textColor="#000000"
-                android:textSize="80sp" />
+        <LinearLayout
+            android:id="@+id/horz_linearlayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="50dp"
+            android:orientation="horizontal">
 
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="#000"
-                android:orientation="horizontal">
+                android:layout_marginTop="70dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
 
                 <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:fontFamily="serif-monospace"
+                    android:layout_height="match_parent"
+                    android:fontFamily="serif-monospace-bold"
                     android:gravity="center_horizontal"
-                    android:text="Ball"
+                    android:text="@string/ttl_home"
                     android:textAllCaps="true"
-                    android:textColor="#ffffff"
-                    android:textSize="20sp" />
+                    android:textColor="@color/black"
+                    android:textSize="26sp" />
 
                 <TextView
-                    android:id="@+id/team_home_ball_score"
+                    android:id="@+id/team_home_score"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:fontFamily="serif-monospace"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="-10dp"
+                    android:fontFamily="serif-monospace-bold"
                     android:gravity="center_horizontal"
                     android:text="0"
                     android:textAllCaps="true"
-                    android:textColor="#ffffff"
-                    android:textSize="24sp" />
-            </LinearLayout>
+                    android:textColor="@color/black"
+                    android:textSize="80sp" />
 
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#000"
-                android:orientation="horizontal">
-
-                <TextView
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:background="@color/black"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="serif-monospace"
+                        android:gravity="center_horizontal"
+                        android:text="@string/scr_ball"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/team_home_ball_score"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="serif-monospace"
+                        android:gravity="center_horizontal"
+                        android:text="0"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white"
+                        android:textSize="24sp" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/black"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="serif-monospace"
+                        android:gravity="center_horizontal"
+                        android:text="@string/scr_strike"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/team_home_strike_score"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="serif-monospace"
+                        android:gravity="center_horizontal"
+                        android:text="0"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white"
+                        android:textSize="24sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/black"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="serif-monospace"
+                        android:gravity="center_horizontal"
+                        android:text="@string/scr_out"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/team_home_out_score"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="serif-monospace"
+                        android:gravity="center_horizontal"
+                        android:text="0"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white"
+                        android:textSize="24sp" />
+                </LinearLayout>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
                     android:fontFamily="serif-monospace"
-                    android:gravity="center_horizontal"
-                    android:text="Strike"
-                    android:textAllCaps="true"
-                    android:textColor="#ffffff"
+                    android:onClick="button_home_score"
+                    android:text="@string/btn_score"
                     android:textSize="20sp" />
 
-                <TextView
-                    android:id="@+id/team_home_strike_score"
+                <Button
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_margin="8dp"
                     android:fontFamily="serif-monospace"
+                    android:onClick="button_home_ball"
+                    android:text="@string/scr_ball"
+                    android:textSize="20sp" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:fontFamily="serif-monospace"
+                    android:onClick="button_home_strike"
+                    android:text="@string/scr_strike"
+                    android:textSize="20sp" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:fontFamily="serif-monospace"
+                    android:onClick="button_home_out"
+                    android:text="@string/scr_out"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="70dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="serif-monospace-bold"
+                    android:gravity="center_horizontal"
+                    android:text="@string/ttl_guest"
+                    android:textAllCaps="true"
+                    android:textColor="@color/black"
+                    android:textSize="26sp" />
+
+                <TextView
+                    android:id="@+id/team_guest_score"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="-10dp"
+                    android:fontFamily="serif-monospace-bold"
                     android:gravity="center_horizontal"
                     android:text="0"
                     android:textAllCaps="true"
-                    android:textColor="#ffffff"
-                    android:textSize="24sp" />
-            </LinearLayout>
+                    android:textColor="@color/black"
+                    android:textSize="80sp" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#000"
-                android:orientation="horizontal">
-
-                <TextView
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:fontFamily="serif-monospace"
-                    android:gravity="center_horizontal"
-                    android:text="Out"
-                    android:textAllCaps="true"
-                    android:textColor="#ffffff"
-                    android:textSize="20sp" />
+                    android:background="@color/black"
+                    android:orientation="horizontal">
 
-                <TextView
-                    android:id="@+id/team_home_out_score"
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="serif-monospace"
+                        android:gravity="center_horizontal"
+                        android:text="@string/scr_ball"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/team_guest_ball_score"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="serif-monospace"
+                        android:gravity="center_horizontal"
+                        android:text="0"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white"
+                        android:textSize="24sp" />
+                </LinearLayout>
+
+
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:fontFamily="serif-monospace"
-                    android:gravity="center_horizontal"
-                    android:text="0"
-                    android:textAllCaps="true"
-                    android:textColor="#ffffff"
-                    android:textSize="24sp" />
+                    android:background="@color/black"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="serif-monospace"
+                        android:gravity="center_horizontal"
+                        android:text="@string/scr_strike"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/team_guest_strike_score"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="serif-monospace"
+                        android:gravity="center_horizontal"
+                        android:text="0"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white"
+                        android:textSize="24sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/black"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="serif-monospace"
+                        android:gravity="center_horizontal"
+                        android:text="@string/scr_out"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/team_guest_out_score"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="serif-monospace"
+                        android:gravity="center_horizontal"
+                        android:text="0"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white"
+                        android:textSize="24sp" />
+                </LinearLayout>
+
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:fontFamily="serif-monospace"
+                        android:onClick="button_guest_score"
+                        android:text="@string/btn_score"
+                        android:textSize="20sp" />
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:fontFamily="serif-monospace"
+                        android:onClick="button_guest_ball"
+                        android:text="@string/scr_ball"
+                        android:textSize="20sp" />
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:fontFamily="serif-monospace"
+                        android:onClick="button_guest_strike"
+                        android:text="@string/scr_strike"
+                        android:textSize="20sp" />
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:fontFamily="serif-monospace"
+                        android:onClick="button_guest_out"
+                        android:text="@string/scr_out"
+                        android:textSize="20sp" />
+
             </LinearLayout>
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="8dp"
-                android:fontFamily="serif-monospace"
-                android:onClick="button_home_score"
-                android:text="Score"
-                android:textSize="20sp" />
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="8dp"
-                android:fontFamily="serif-monospace"
-                android:onClick="button_home_ball"
-                android:text="Ball"
-                android:textSize="20sp" />
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="8dp"
-                android:fontFamily="serif-monospace"
-                android:onClick="button_home_strike"
-                android:text="Strike"
-                android:textSize="20sp" />
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="8dp"
-                android:fontFamily="serif-monospace"
-                android:onClick="button_home_out"
-                android:text="Out"
-                android:textSize="20sp" />
-
 
         </LinearLayout>
 
-        <View
-            android:layout_width="1dp"
-            android:layout_height="wrap_content" />
-
-        <LinearLayout
-            android:layout_width="wrap_content"
+        <Button
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="70dp"
-            android:layout_weight="1"
-            android:orientation="vertical">
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:fontFamily="serif-monospace"
+            android:onClick="button_reset_all"
+            android:text="Reset"
+            android:layout_alignParentBottom="true"
+            android:textSize="24sp" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:fontFamily="serif-monospace-bold"
-                android:gravity="center_horizontal"
-                android:text="Guest"
-                android:textAllCaps="true"
-                android:textColor="#000000"
-                android:textSize="26sp" />
-
-            <TextView
-                android:id="@+id/team_guest_score"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="-10dp"
-                android:fontFamily="serif-monospace-bold"
-                android:gravity="center_horizontal"
-                android:text="0"
-                android:textAllCaps="true"
-                android:textColor="#000000"
-                android:textSize="80sp" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#000"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:fontFamily="serif-monospace"
-                    android:gravity="center_horizontal"
-                    android:text="Ball"
-                    android:textAllCaps="true"
-                    android:textColor="#ffffff"
-                    android:textSize="20sp" />
-
-                <TextView
-                    android:id="@+id/team_guest_ball_score"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:fontFamily="serif-monospace"
-                    android:gravity="center_horizontal"
-                    android:text="0"
-                    android:textAllCaps="true"
-                    android:textColor="#ffffff"
-                    android:textSize="24sp" />
-            </LinearLayout>
-
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#000"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:fontFamily="serif-monospace"
-                    android:gravity="center_horizontal"
-                    android:text="Strike"
-                    android:textAllCaps="true"
-                    android:textColor="#ffffff"
-                    android:textSize="20sp" />
-
-                <TextView
-                    android:id="@+id/team_guest_strike_score"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:fontFamily="serif-monospace"
-                    android:gravity="center_horizontal"
-                    android:text="0"
-                    android:textAllCaps="true"
-                    android:textColor="#ffffff"
-                    android:textSize="24sp" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#000"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:fontFamily="serif-monospace"
-                    android:gravity="center_horizontal"
-                    android:text="Out"
-                    android:textAllCaps="true"
-                    android:textColor="#ffffff"
-                    android:textSize="20sp" />
-
-                <TextView
-                    android:id="@+id/team_guest_out_score"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:fontFamily="serif-monospace"
-                    android:gravity="center_horizontal"
-                    android:text="0"
-                    android:textAllCaps="true"
-                    android:textColor="#ffffff"
-                    android:textSize="24sp" />
-            </LinearLayout>
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="8dp"
-                android:fontFamily="serif-monospace"
-                android:onClick="button_guest_score"
-                android:text="Score"
-                android:textSize="20sp" />
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="8dp"
-                android:fontFamily="serif-monospace"
-                android:onClick="button_guest_ball"
-                android:text="Ball"
-                android:textSize="20sp" />
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="8dp"
-                android:fontFamily="serif-monospace"
-                android:onClick="button_guest_strike"
-                android:text="Strike"
-                android:textSize="20sp" />
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="8dp"
-                android:fontFamily="serif-monospace"
-                android:onClick="button_guest_out"
-                android:text="Out"
-                android:textSize="20sp" />
-
-        </LinearLayout>
-
-    </LinearLayout>
-
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="8dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
-        android:layout_marginTop="6dp"
-        android:fontFamily="serif-monospace"
-        android:onClick="button_reset_all"
-        android:text="Reset"
-        android:textSize="24sp" />
-
-</RelativeLayout>
+    </RelativeLayout>
+</ScrollView>

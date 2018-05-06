@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Score Keeper</string>
+    <string name="ttl_home">Home</string>
+    <string name="ttl_guest">Guest</string>
+    <string name="scr_ball">Ball</string>
+    <string name="scr_strike">Strike</string>
+    <string name="scr_out">Out</string>
+    <string name="btn_score">Score</string>
+    <string name="btn_reset">Reset</string>
 </resources>

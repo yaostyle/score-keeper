@@ -8,6 +8,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
+    //Init all vars
     int homeScore = 0;
     int homeBallScore = 0;
     int homeStrikeScore = 0;
